@@ -10,7 +10,7 @@
 <body>
 
     {% if user.is_authenticated %}
-        <h2>Hi {{ user.username }}! || <a href="/add">CRUD</a> || <a href="/api/v1/">API</a> || <a href="{% url 'logout' %}">Log out</a></h2>
+        <h2>Hi {{ user.username }}! || <a href="/add">CRUD</a> || <a href="/api/v1/">REST API</a> || <a href="/graphql">graphiQL</a> || <a href="{% url 'logout' %}">Log out</a></h2>
     {% else %}
         <h2>You are not logged in. || <a href="{% url 'login' %}">Log In</a></h2>
     {% endif %}
@@ -21,6 +21,7 @@
             <li>Title: {{ post.title }}</li>
             <li>Author: {{ post.author }}</li>
             <li>Body: {{ post.body }}</li>
+            <li>Creted At: {{ post.created_at }}</li>
         </ul>
     {% endfor %}
 </body>

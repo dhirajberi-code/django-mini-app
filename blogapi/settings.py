@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # 3rd-party apps
-    'rest_framework', # new
+    'rest_framework',
+    'graphene_django',
 
     # Local
     'posts.apps.PostsConfig',
